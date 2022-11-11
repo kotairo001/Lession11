@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #border {
+            width: 200px;
+            border: 1px solid lightgreen;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="border" >
+        <p>
+            <img id="1"
+            src="/Lession11/img/img1.jpg" 
+            alt="" width="200px" height="120px" onclick="changeImg1()">
+        </p>
+        <p>
+            <img id="2" onclick="changeImg2()"
+            src="/Lession11/img/img2.jpg" 
+            alt="" width="200px" height="120px">
+        </p>
+        <p>
+            <img id="3" onclick="changeImg3()"
+            src="/Lession11/img/img3.jpg" 
+            alt="" width="200px" height="120px">
+        </p>
+    </div>
+    <button onclick="finish()">
+        Submit
+    </button>
+    <script>
+        function changeImg1() {
+            var img1 = document.getElementById('1');
+            if (img1.src.match("/Lession11/img/img1.jpg")) {
+                img1.src = "/Lession11/img/img4.jpg"
+            } else {
+                img1.src = "/Lession11/img/img1.jpg"
+            }
+        }
+        function changeImg2() {
+            var img2 = document.getElementById('2');
+            if (img2.src.match("/Lession11/img/img2.jpg")) {
+                img2.src = "/Lession11/img/img5.jpg"
+            } else {
+                img2.src = "/Lession11/img/img2.jpg"
+            }
+        }
+        function changeImg3() {
+            var img3 = document.getElementById('3');
+            if (img3.src.match("/Lession11/img/img3.jpg")) {
+                img3.src = "/Lession11/img/img6.jpg"
+            } else {
+                img3.src = "/Lession11/img/img3.jpg"
+            }
+        }
+        function finish () {
+            document.getElementById("border").style.border = "2px solid red"
+        }
+    </script>
+</body>
+</html>
