@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+  background-color: rgb(215, 139, 139);
+}
+.calculator {
+  text-align: center;
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: lightpink;
+  padding: 5px;
+  box-shadow: 15px 15px  rgb(253, 119, 141);
+}
+
+.buttons {
+  width: 275px;
+  text-align: center;
+  margin:10px auto;
+}
+
+.button{
+  float: left;
+  height: 70px;
+  width: 68px;
+  color: #f19953;
+  background: #fff;
+  cursor: pointer;
+}
+
+.text {
+  margin: 10px 0px 5px 0px;
+  text-align: right;
+  border: none;
+  height: 25px;
+  width: 275px;
+  background-color: palevioletred;
+  font-size: 25px;
+}
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" name="input" id="text" class="text" readonly>
+        <div class="buttons">
+            <button class="button" id="1" onclick="onclick1()">1</button>
+            <button class="button" id="2" onclick="onclick2()">2</button>
+            <button class="button" id="3" onclick="onclick3()">3</button>
+            <button class="button" id="plus" onclick="onclick4()">+</button>
+            <button class="button" id="4" onclick="onclick5()">4</button>
+            <button class="button" id="5" onclick="onclick6()">5</button>
+            <button class="button" id="6" onclick="onclick7()">6</button>
+            <button class="button" id="subtr" onclick="onclick8()">-</button>
+            <button class="button" id="7" onclick="onclick9()">7</button>
+            <button class="button" id="8" onclick="onclick10()">8</button>
+            <button class="button" id="9" onclick="onclick11()">9</button>
+            <button class="button" id="multi" onclick="onclick12()">x</button>
+            <button class="button" id="ac" onclick="clearScreen()">AC</button>
+            <button class="button" id="0" onclick="onclick13()">0</button>
+            <button class="button" id="equal" onclick="equal()">=</button>
+            <button class="button" id="div" onclick="onclick14()">/</button>
+        </div>
+    </div>
+    <script>
+        function onclick1 () {
+        var a = document.getElementById('text').value += '1';
+        document.getElementById('1').onclick="a"};
+        function onclick2 () {
+        var b = document.getElementById('text').value += '2';
+        document.getElementById('2').onclick="b"};
+        function onclick3 () {
+        var c = document.getElementById('text').value += '3';
+        document.getElementById('3').onclick="c"};
+        function onclick4 () {
+        var d = document.getElementById('text').value += '+';
+        document.getElementById('plus').onclick="d"};
+        function onclick5 () {
+        var e = document.getElementById('text').value += '4';
+        document.getElementById('4').onclick="e"};
+        function onclick6 () {
+        var f = document.getElementById('text').value += '5';
+        document.getElementById('5').onclick="f"};
+        function onclick7 () {
+        var g = document.getElementById('text').value += '6';
+        document.getElementById('6').onclick="g"};
+        function onclick8 () {
+        var h = document.getElementById('text').value += '-';
+        document.getElementById('subtr').onclick="h"};
+        function onclick9 () {
+        var i = document.getElementById('text').value += '7';
+        document.getElementById('7').onclick="i"};
+        function onclick10 () {
+        var j = document.getElementById('text').value += '8';
+        document.getElementById('8').onclick="j"};
+        function onclick11 () {
+        var k = document.getElementById('text').value += '9';
+        document.getElementById('9').onclick="k"};
+        function onclick12 () {
+        var l = document.getElementById('text').value += '*';
+        document.getElementById('multi').onclick="l"};
+        function onclick13 () {
+        var m = document.getElementById('text').value += '0';
+        document.getElementById('0').onclick="m"};
+        function onclick14 () {
+        var n = document.getElementById('text').value += '/';
+        document.getElementById('div').onclick="n"};
+        
+        function clearScreen() {
+            document.getElementById("text").value = '';
+        }
+        function equal (){
+            var o = document.getElementById('text').value;
+            document.getElementById("text").value = eval(o);
+        }
+    </script>
+</body>
+</html>
