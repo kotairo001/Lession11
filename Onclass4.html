@@ -6,11 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            background-color: wheat;
+        }
         #border {
-            width: 200px;
-            border: 1px solid lightgreen;
+            width: 25%;
+            border: 5px dotted rgb(117, 98, 255);
             padding: 0;
-            margin: 0;
+            margin: auto;
+            margin-top: 100px;
+        }
+        #border p {
+            text-align: center;
+        }
+        p img {
+            border: 5px double rgb(132, 82, 218);
         }
     </style>
 </head>
@@ -32,9 +42,9 @@
             alt="" width="200px" height="120px">
         </p>
     </div>
-    <button onclick="finish()">
+    <!-- <button onclick="finish()">
         Submit
-    </button>
+    </button> -->
     <script>
         function changeImg1() {
             var img1 = document.getElementById('1');
@@ -55,14 +65,15 @@
         function changeImg3() {
             var img3 = document.getElementById('3');
             if (img3.src.match("/Lession11/img/img3.jpg")) {
-                img3.src = "/Lession11/img/img6.jpg"
+                img3.src = "/Lession11/img/img6.jpg";
+                document.getElementById("border").style.border = "5px dotted red";
             } else {
                 img3.src = "/Lession11/img/img3.jpg"
             }
         }
-        function finish () {
-            document.getElementById("border").style.border = "2px solid red"
-        }
+        // function finish () {
+        //     document.getElementById("border").style.border = "2px solid red"
+        // }
     </script>
 </body>
 </html>
