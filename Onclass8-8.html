@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt("Tổng thu nhập"));
+        var b = parseInt(prompt("Số người phụ thuộc"));
+                //c la tien chiu thue
+        var c = a-11000000;
+                //d la giam trừ
+        var d = b*4400000;
+        // e là thuế <5tr
+        var e = (c-d)*5/100;
+        // // f là thuế từ 5tr~10tr
+        var f = (c-d)*10/100;
+        //// g là thuế từ 10tr~18tr
+        var g = (c-d)*15/100;
+        //// h là thuế từ 18tr~32tr
+        var h = (c-d)*20/100;
+        //// i là thuế từ 32tr~52tr
+        var i = (c-d)*25/100;
+        //// j là thuế từ 52tr~80tr
+        var j = (c-d)*30/100;
+        //// k là thuế từ >80tr
+        var k = (c-d)*35/100;
+
+        if (a<=11000000) {
+            document.write("Thuế TNCN của bạn là 0 VND")
+        } else if (a<=18000000) 
+                    if(b==0) {
+                        document.write("Thuế TNCN của bạn là " + e + "VND")}
+                    else {document.write("Thuế TNCN của bạn là 0 VND")}
+                else if (a<=22000000) {
+                    document.write("Thuế TNCN của bạn là " + (e+f) + "VND")}
+                else if (a<=22000000) {
+                    document.write("Thuế TNCN của bạn là " + (e+f+g) + "VND")
+                } 
+                else if (a<=52000000) {
+                    document.write("Thuế TNCN của bạn là " + (e+f+g+h) + "VND")
+                }
+                else if (a<=80000000) {
+                    document.write("Thuế TNCN của bạn là " + (e+f+g+h+i) + "VND")
+                } 
+                else {
+                    document.write("Thuế TNCN của bạn là " + (e+f+g+h+i+j) + "VND")}
+
+        // if (a>=5000000) 
+        //     if(a>=10000000)
+        //         if(a>=18000000)  
+        //             if(a>=32000000)
+        //                 if(a>=52000000)
+        //                     if(a>=82000000) {
+        //                         document.write("Thuế TNCN của bạn là " (e+f+g+h+i+j+k) + "VND")
+        //                     }
+        //                     else {
+        //                         document.write("Thuế TNCN của bạn là " (e+f+g+h+i+j) + "VND")
+        //                     }
+        //                 else {
+        //                     document.write("Thuế TNCN của bạn là " (e+f+g+h+i) + "VND")
+        //                 }
+        //             else {
+        //                 document.write("Thuế TNCN của bạn là " (e+f+g+h) + "VND")
+        //                 }
+        //         else {
+        //             document.write("Thuế TNCN của bạn là " (e+f+g) + "VND")
+        //                 }
+        //     else {
+        //         document.write("Thuế TNCN của bạn là " (e+f) + "VND")
+        //             }
+        // else {
+        //     document.write("Thuế TNCN của bạn là " (e) + "VND")
+        //         }
+
+
+    </script>
+</body>
+</html>
