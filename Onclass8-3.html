@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt("Input first number!"));
+        var b = parseInt(prompt("Input second number!"));
+        var c = parseInt(prompt("Input third number!"));
+        //d là delta
+        var delta = Math.pow(b,2)-(4*a*c);
+        // e là nghiệm khi delta = 0
+        // document.write(delta)
+        var e = -b/(2*a);
+        // x1, x2 là nghiệm khi delta > 0
+        var x1 = (-b + Math.sqrt(delta))/(2*a);
+        var x2 = (-b - Math.sqrt(delta))/(2*a);
+        
+        // // if (a==0) {
+        // //     alert("Result is " + (-c/b));
+        // // } else 
+        if (a!=0) 
+            if (delta < 0) {
+             document.write("No result!");
+        }  else if (delta > 0) {
+            document.write("Result is " + x1 + " and " + x2);
+        }   else {
+            document.write("Result is " + e);
+        }
+        if (a==0) {document.write("Result is " + (-c/b))}
+    </script>
+</body>
+</html>
